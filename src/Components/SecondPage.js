@@ -14,6 +14,7 @@ const SecondPage = ({ onNext, onBack }) => {
 
   const nextPageHandler = () => {
     localStorage.setItem('Second Page Data', JSON.stringify(secondPageData))
+    onNext()
   }
   return (
     <Card>
@@ -72,14 +73,15 @@ const SecondPage = ({ onNext, onBack }) => {
           className="mt-4 mb-3"
           label="Send Email alerts if project exceeds 80% of budget"
         />
-      </Form>
-
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
         <Button variant="outline-secondary" onClick={onBack}>
           Back
         </Button>
         <Button onClick={nextPageHandler}>Next</Button>
       </div>
+      </Form>
+
+      
       <p style={{ textAlign: "center", fontSize: "small" }}>page 2</p>
     </Card>
   );
