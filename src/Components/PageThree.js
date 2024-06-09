@@ -22,6 +22,7 @@ const PageThree = ({ onNext, onBack }) => {
     }
 
     const nextPageHandler = () => {
+        //It stores the third page data in the local storage
         localStorage.setItem('Third Page Data', JSON.stringify(values));
         onNext();
     }

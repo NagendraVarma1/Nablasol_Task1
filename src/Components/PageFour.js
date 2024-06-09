@@ -22,6 +22,7 @@ const PageFour = ({onNext, onBack}) => {
     }
 
     const nextPageHandler = () => {
+        //It stores the fourth page data in the local storage
         localStorage.setItem('Fourth Page Data', JSON.stringify(values));
         onNext();
     }

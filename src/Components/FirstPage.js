@@ -20,6 +20,7 @@ const FirstPage = ({onNext}) => {
     }
 
     const nextPageHandler = () => {
+        //It Stores the first page data in the local storage
         localStorage.setItem('First Page Data', JSON.stringify(firstPageData))
         onNext()
     }

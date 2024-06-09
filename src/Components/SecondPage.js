@@ -13,6 +13,7 @@ const SecondPage = ({ onNext, onBack }) => {
   }
 
   const nextPageHandler = () => {
+    //It Stores the second page data in the local storage
     localStorage.setItem('Second Page Data', JSON.stringify(secondPageData))
     onNext()
   }
